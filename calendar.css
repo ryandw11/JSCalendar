@@ -1,0 +1,111 @@
+div#calendar table {
+    width: 80%;
+    margin: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+div#calendar caption {
+    width: 100%;
+    caption-side: top;
+    text-align: center;
+    font-size: 2em;
+}
+
+td:not(.calendarDates) {
+    background-color: gray;
+}
+
+.calendarDates {
+    width: 14.28%;
+    border: 1px solid black;
+    height: 90px;
+}
+
+th {
+    border: 1px solid black;
+    height: 20px;
+}
+
+.calendarNum {
+    position: relative;
+    bottom: 30px;
+    z-index: 3;
+    float: left;
+}
+
+#calendarToday {
+    background-color: rgb(221, 218, 218);
+}
+
+.calendarDates {
+    max-height: 89px;
+    overflow: auto;
+}
+
+.calendarDates p {
+    margin: 0;
+}
+
+.calendarEvents {
+    position: absolute;
+    max-height: 54px;
+    overflow: auto;
+    text-align: center;
+    margin: auto;
+}
+
+.calendarMobileNum {
+    float: left;
+}
+
+.calendarNext {
+    position: relative;
+    top: 35px;
+    left: 75%;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.calendarPrev {
+    position: relative;
+    top: 35px;
+    left: 25%;
+    font-size: 1.5em;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media only screen and (min-width: 1162px) {
+    .calendarEvents {
+        max-width: 129px;
+    }
+}
+
+@media only screen and (max-width: 858px) {
+    .calendarEvents {
+        max-width: 93px;
+    }
+}
+
+@media only screen and (max-width: 715px) {
+    .calendarEvents {
+        position: initial;
+        max-height: 100px;
+        width: 100%;
+        max-width: none;
+    }
+
+    .calendarEvents p {
+        width: 100%;
+        text-align: center;
+        max-height: none;
+        max-width: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .calendarPrev {
+        left: 19%;
+    }
+}
